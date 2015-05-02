@@ -5,7 +5,7 @@ class Image < ActiveRecord::Base
 
   PATH_IMGFILES = File.join Rails.root, "public", "images"
 
-  def imgfile = (imgfile)
+  def imgfile=(imgfile)
     unless imgfile.blank?
       @imgfile = imgfile
       self.name = imgfile.original_filename
